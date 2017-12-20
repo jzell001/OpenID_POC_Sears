@@ -2,7 +2,7 @@
 <font><center><b>OpenID POC <br /> Sears Holdings Corporation</b></font><br /><br />
 </h1>
 
-This project is a Proof of Concept (POC) that focuses on implementing a third-party OpenID Provider within Sears Holdings Corporation.. The OpenID service is an authentication and authorization protocol that eliminates the need for creating login credentials at additional websites. 
+This project is a Proof of Concept (POC) that focuses on implementing a third-party OpenID Provider within Sears Holdings Corporation. The OpenID service is an authentication and authorization protocol that eliminates the need for creating login credentials at additional websites. 
 
 The third-party login service would allow Sears members to create accounts and login at participating partner websites by using their Sears login credentials. 
 
