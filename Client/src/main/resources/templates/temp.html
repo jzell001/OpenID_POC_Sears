@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    
+	
+	
+	<title>Example</title>
+	<style>
+	  * {
+	   box-sizing: border-box; 
+	  }
+	  body {
+		margin: 0;
+	  }
+	  #main {
+		display: flex;
+		min-height: calc(100vh - 40vh);
+	  }
+	  #main > article {
+		flex: 1;
+	  }
+	  #main > nav, 
+	  #main > aside {
+		flex: 0 0 20vw;
+		background: beige;
+	  }
+	  #main > nav {
+		order: -1;
+	  }
+	  header, footer, article, nav, aside {
+		padding: 1em;
+	  }
+	  header {
+		background: MidnightBlue;
+		height: 20vh;
+	  }
+	  footer {
+		background: Gainsboro;
+		height: 20vh;
+	  } 
+	</style>
+
+
+	<body>
+	  <header>
+		<!-- <h1>Sears</h1> -->
+		<font size="10" color="white">Sears</font>
+		</header>
+	  <div id="main">
+		<article>
+			
+			
+			<textarea rows="2" cols="30" style="color: white; background-color: Red; font-size:x-large; border-style: solid; border-color: black; resize: none; font-weight:bold; margin-top: 1cm; padding-top: 0.25cm">&#9888; Unauthorized</textarea>
+			<br />
+			<textarea rows="4" cols="46" style="border-style: solid; border-color: black; resize: none; padding-top: 0.25cm">It appears that you don't have permission to access this page. Please make sure you're authorized to view this content.</textarea> 
+			
+			<br />
+			<br />
+			<font size="3" align="center">redirecting...</font>
+			
+			
+			
+			
+			
+			
+			<form th:action="@{/logout}" method="post" name="member_signup" hidden="hidden">
+				<input type="submit" value="Sign Out"/>
+			</form>
+			
+			
+			<script type="text/javascript">
+				window.onload=function(){
+					window.setTimeout('document.member_signup.submit()', 2000)
+				}
+			</script>
+		
+		
+		
+		
+		
+		</article>
+		<nav></nav>
+		<aside></aside>
+	  </div>
+	  <footer></footer>
+	</body>
+	
+	
+	
+</html>
+
+
+
+
+

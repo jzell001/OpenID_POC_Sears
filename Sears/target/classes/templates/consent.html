@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    
+	
+	
+	<title>Sears Consent</title>
+	<style>
+	  * {
+	   box-sizing: border-box; 
+	  }
+	  body {
+		margin: 0;
+	  }
+	  #main {
+		display: flex;
+		min-height: calc(100vh - 40vh);
+	  }
+	  #main > article {
+		flex: 1;
+	  }
+	  #main > nav, 
+	  #main > aside {
+		flex: 0 0 20vw;
+		background: beige;
+	  }
+	  #main > nav {
+		order: -1;
+	  }
+	  header, footer, article, nav, aside {
+		padding: 1em;
+	  }
+	  header {
+		background: MidnightBlue;
+		height: 20vh;
+	  }
+	  footer {
+		background: Gainsboro;
+		height: 20vh;
+	  } 
+	#form input{
+	  background: Chocolate;
+	}
+	#form input .submit{
+		background: Chocolate;
+	}
+
+	#form label {
+		background: Chocolate;
+	}
+	</style>
+
+
+	<body>
+	  <header>
+		<!-- <h1>Sears</h1> -->
+		<font size="10" color="white">Sears</font>
+		</header>
+	  <div id="main">
+		<article>
+			
+			
+			
+			<font size="6" align="center">Grant Access?</font>
+			<br />
+			<br />
+			<font size="3"><b>Public data only</b></font>
+			<br />
+			<font size="3">Limited access to your public data</font>
+			<br />
+			<font size="2">This application will be able to identify you and read public information.</font>
+			
+			
+			<br />
+			<br />
+			
+			<form action="/goBackSuccess">
+				<input type="submit" value="Yes"/>
+			</form>
+			
+			<br />
+			
+			<form action="/logoutCall">
+				<input type="submit" value="No"/>
+			</form>	
+		
+		
+		
+		
+		
+		</article>
+		<nav></nav>
+		<aside></aside>
+	  </div>
+	  <footer></footer>
+	</body>
+	
+	
+	
+</html>
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Uber Redirect</title>
+    </head>
+	
+		<body onload="document.GetUserInfo.submit()">
+		
+		<p> redirecting... </p>
+		<!-- <h2 th:inline="text">access_code: [[${a_code}]]!</h2>
+		<h3 th:inline="text">access_token: [[${a_token}]]!</h3> -->
+		
+		<form name="GetUserInfo" action="http://localhost:8080/userInfo" method="post" hidden="hidden">
+			<input type="hidden" value="client id" th:value="${a_id}" name="client-id"/>
+			<input type="hidden" value="client secret" th:value="${a_secret}" name="client-secret"/>
+			<input type="hidden" value="access token" th:value="${a_token}" name="access-tok"/>
+			<input type="submit" value="redirect"/>
+        </form>
+		
+		
+    </body>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

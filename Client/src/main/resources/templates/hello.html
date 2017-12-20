@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    
+	
+	
+	<title>Uber Logged In User</title>
+	<style>
+	  * {
+		box-sizing: border-box; 
+	  }
+	  body {
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
+		margin: 0;
+	  }
+	  #main {
+		display: flex;
+		flex: 1;
+	  }
+	  #main > article {
+		flex: 1;
+		order: 1;
+	  }
+	  #main > nav, 
+	  #main > aside {
+		flex: 0 0 20vw;
+	  }
+	  #main > nav {
+		background: White;
+		order: 3;
+	  }
+	  #main > aside {
+		background: beige;
+		order: 2;
+	  }
+	  header, footer, article, nav, aside {
+		padding: 1em;
+	  }
+	  header {
+		background: Black;
+		height: 20vh;
+	  }
+	  footer {
+		background: Black;
+		height: 20vh;
+	  }
+	</style>
+	<body>
+		<header>
+			<font size="10" color="white">Uber</font>
+		</header>
+	  <div id="main">
+		<article>
+		
+			<font size="5" >Welcome to Uber!</font>
+			<br />
+			<br />
+			<font size="4"  th:inline="text">Hello <b>[[${name1}]] [[${name2}]]!</b></font>
+			
+			<br />
+			<br />
+			<font size="3"  th:inline="text">User information obtained from Sears:</font>
+			
+			<br />
+			<font size="2"  th:inline="text">ID#: &emsp; &emsp; &emsp; [[${name3}]]</font>
+			<br />
+			<font size="2"  th:inline="text">Email: &emsp; &emsp; &nbsp; [[${name4}]]</font>
+			<br />
+			<font size="2"  th:inline="text">Zip Code: &emsp; &nbsp; [[${name5}]]</font>
+			
+		
+		</article>
+		<nav></nav>
+		<aside>
+			
+			<br />
+			<br />
+			
+			<font size="5" > Sign Out: </font>
+			
+			<br />
+			<br />
+			
+			<form method="get" action="http://localhost:8080/logoutCall">
+				<div><label> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  </label><input type="submit" value="Sign Out"/></div>
+			</form>
+		
+		
+		
+		
+		
+		</aside>
+	  </div>
+	  <footer></footer>
+	</body>
+	
+	
+	
+	
+<!-- 	<head>
+        <title>Client Application Greeting Page</title>
+    </head>
+    <body>
+	
+		<h1 th:inline="text">Hello [[${name1}]] [[${name2}]]!</h1>
+		
+		<form method="get" action="http://localhost:8080/logoutCall">
+			<input type="submit" value="Sign Out"/>
+        </form>
+		
+		
+    </body> -->
+	
+	
+	
+	
+</html>

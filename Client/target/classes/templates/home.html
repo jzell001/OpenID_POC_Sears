@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    
+	
+	
+	<title>Uber Home Page</title>
+	<style>
+	  * {
+		box-sizing: border-box; 
+	  }
+	  body {
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
+		margin: 0;
+	  }
+	  #main {
+		display: flex;
+		flex: 1;
+	  }
+	  #main > article {
+		flex: 1;
+		order: 1;
+	  }
+	  #main > nav, 
+	  #main > aside {
+		flex: 0 0 20vw;
+	  }
+	  #main > nav {
+		background: White;
+		order: 3;
+	  }
+	  #main > aside {
+		background: beige;
+		order: 2;
+	  }
+	  header, footer, article, nav, aside {
+		padding: 1em;
+	  }
+	  header {
+		background: Black;
+		height: 20vh;
+	  }
+	  footer {
+		background: Black;
+		height: 20vh;
+	  }
+	</style>
+	<body>
+		<header>
+			<font size="10" color="white">Uber</font>
+		</header>
+	  <div id="main">
+		<article>
+			<font size="5" >Welcome to Uber!</font>
+			
+			<br />
+			<br />
+			
+			<textarea rows="1" cols="30" style="color: black; background-color: white; font-size:x-large; border-style: solid; border-color: white; resize: none; font-weight:bold; margin-top: 1cm; padding-top: 0.25cm">Easiest way around</textarea>
+			<!-- <br /> -->
+			<textarea rows="4" cols="46" style="border-style: solid; border-color: white; resize: none; ">One tap and a car comes directly to you. Hop in, your driver knows exactly where to go. And when you get there, just step out. Payment is completely seamless.</textarea> 
+			
+			
+			
+			
+			
+		</article>
+		<nav></nav>
+		<aside>
+		
+		<font size="5" > Sign In:</font>
+		<br />
+		<br />
+		
+		<form action="/client/redirectHome" method="post" >
+			<div><label> Email: </label></div>
+			<div><label> </label> <input type="text" name="username"/> </div>
+			<br />
+			<div><label> Password:  </label></div>
+			<div><label> </label> <input type="password" name="password"/> </div>
+			<br />
+			<div><label> &emsp; &emsp; &emsp; &emsp; &emsp;  </label><input type="submit" value="Sign In" /></div>
+		</form>
+		
+		<br />
+		<br />
+		
+		
+		<font size="3" > ------------ OR ------------ </font>
+		
+		<br />
+		<br />
+		
+		<form action="/client/sendPost">
+			<input type="submit" value="Login with Sears" style="background-color: Blue; color: white; font-size:15px; height: 30px; width: 150px;"/>
+		</form>	
+		
+		<br />
+		<br />
+		
+		<!-- <form action="/client/temp">
+			<input type="submit" value="test"/>
+        </form>	 -->
+		
+		
+		
+		</aside>
+	  </div>
+	  <footer></footer>
+	</body>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- 
+	
+	<head>
+        <title>Client Application Home Page</title>
+		
+    </head>
+    <body>
+		
+		<h1>Client Application</h1>
+		<p>Login with Sears:</p>
+
+		<form action="/client/sendPost">
+			<input type="submit" value="Login"/>
+        </form>	
+
+		<br />
+		
+		<form action="/client/temp">
+			<input type="submit" value="test"/>
+        </form>		
+		
+        
+    </body> -->
+	
+	
+</html>
+
+
+
+
+
+
